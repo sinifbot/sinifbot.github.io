@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="description"
+        content="SınıfBot, Discord'daki ders çalışma ve sanal sınıf gruplarınız için moderasyon botudur.">
+    <meta name="keywords"
+        content="sınıfbot, sınıfbot discord, sınıfbot dc, sınıfbot discord bot, sınıfbot moderasyon botu, sınıfbot türkçe bot, sınıfbot sanal sınıf botu, sınıfbot soru çözüm bot, sınıfbot discord soru çözüm bot, sınıfbot discord sanal sınıf bot">
+    <meta name="author" content="SınıfBot">
+    <meta name="robots" content="index, nofollow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komutlar - SınıfBot</title>
+    <link rel="icon" href="./src/icons/sinifbot.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="./index.html"><img src="src/icons/sinifbot.png" width="35px" height="35px" /></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">Ana Sayfa</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./komutlar.html">Komutlar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./ozellikler.html">Özellikler</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./botu-sunucuma-nasil-eklerim.html">Botu Sunucuma Nasıl Eklerim?</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./iletisim.html" target="_blank">İletişim & Hata Bildir</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="commands-main">
+        <div class="commands-header">
+            <button class="accordion active">!pin</button>
+            <div class="panel" style="max-height: 104px;">
+                <br>
+                <p>Kullanım: <code>!pin text</code></p>
+                <p>Kanala belirtilen yazıyı sabitler.</p>
+            </div>
+
+            <button class="accordion">!report</button>
+            <div class="panel">
+                <br>
+                <p>Kullanım: <code>!report @kullanıcı-adı sebep</code></p>
+                <p>Etiketlenen kişiyi sebebi ile birlikte raporlar.</p>
+            </div>
+
+            <button class="accordion">!ban</button>
+            <div class="panel">
+                <br>
+                <p>Kullanım: <code>!ban @kullanıcı-adı</code></p>
+                <p>Etiketlenen kişiye belirlediginiz süre kadar chat ban atar.</p>
+            </div>
+
+            <button class="accordion">!unban</button>
+            <div class="panel">
+                <br>
+                <p>Kullanım: <code>!unban @kullanıcı-adı</code></p>
+                <p>Etiketlenen kişinin chat banı açılır.</p>
+            </div>
+
+            <button class="accordion">!yetki</button>
+            <div class="panel">
+                <br>
+                <p>Kullanım: <code>!yetki @kullanıcı-adı</code></p>
+                <p>Etiketlenen kişiye Chat Admin<code>**</code> rolü verilir. Rolü geri almak için de aynı komut
+                    kullanılır.</p>
+                <p style="font-size: 10px;"><code>**</code> Chat Admin'ler sadece <code>!ban</code> ve
+                    <code>!unban</code> komutlarını
+                    kullanabilir.
+                </p>
+            </div>
+
+            <button class="accordion">!yaz</button>
+            <div class="panel">
+                <br>
+                <p>Kullanım: <code>!yaz text</code></p>
+                <p>Belirttiğiniz metini bota yazdırır.</p>
+            </div>
+
+            <button class="accordion">!yardım</button>
+            <div class="panel">
+                <br>
+                <p>Kullanım: <code>!yardım</code></p>
+                <p>Yardım menüsü açılır.</p>
+            </div>
+
+            <button class="accordion">!sunucu-bilgi</button>
+            <div class="panel">
+                <br>
+                <p>Kullanım: <code>!sunucu-bilgi</code></p>
+                <p>Sunucu bilgilerini gösterir.</p>
+            </div>
+
+            <script>
+                var acc = document.getElementsByClassName("accordion");
+                var i;
+
+                for (i = 0; i < acc.length; i++) {
+                    acc[i].addEventListener("click", function () {
+                        this.classList.toggle("active");
+                        var panel = this.nextElementSibling;
+                        if (panel.style.maxHeight) {
+                            panel.style.maxHeight = null;
+                        } else {
+                            panel.style.maxHeight = panel.scrollHeight + "px";
+                        }
+                    });
+                }
+            </script>
+        </div>
+
+        <div class="footer">
+            <p>© 2021 SınıfBot</p>
+            <p>powered by <a class="footer-link" href="https://hknsoft.com/" target="_blank"
+                    rel="noreferrer noopener nofollow">hknsoft</a></p>
+        </div>
+    </div>
+</body>
+
+</html>

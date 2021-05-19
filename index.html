@@ -1,6 +1,126 @@
 <!DOCTYPE html>
 <html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="description"
+        content="SınıfBot, Discord'daki ders çalışma ve sanal sınıf gruplarınız için moderasyon botudur.">
+    <meta name="keywords"
+        content="sınıfbot, sınıfbot discord, sınıfbot dc, sınıfbot discord bot, sınıfbot moderasyon botu, sınıfbot türkçe bot, sınıfbot sanal sınıf botu, sınıfbot soru çözüm bot, sınıfbot discord soru çözüm bot, sınıfbot discord sanal sınıf bot">
+    <meta name="author" content="SınıfBot">
+    <meta name="robots" content="index, nofollow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SınıfBot - Discord Sanal Sınıf, Soru Çözüm Moderasyon Botu</title>
+    <link rel="icon" href="./src/icons/sinifbot.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+
 <body>
-<h>Hello, World!</h>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="./index.html"><img src="src/icons/sinifbot.png" width="35px" height="35px" /></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">Ana Sayfa</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./komutlar.html">Komutlar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./ozellikler.html">Özellikler</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./botu-sunucuma-nasil-eklerim.html">Botu Sunucuma Nasıl Eklerim?</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./iletisim.html" target="_blank">İletişim & Hata Bildir</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="main">
+        <div class="header">
+            <h1>Discord'daki Sınıf Gruplarınız İçin En iyi Bot!</h1><br>
+            <h3>Sanal sınıf ve soru çözüm gruplarınız için moderasyon botu. Üstelik tamamen ücretsiz!</h3>
+        </div>
+        <div class="buttons">
+            <button onclick="window.open('./ekle.html', '_blank');" type="button" class="discord-add">
+                <img src="./src/icons/discord.svg" alt="MEE6" style="margin-inline-end: 15px" />Discord'a Ekle
+            </button>
+            <button onclick="location.href='./komutlar.html'" type="button" class="see">Komutları Gör</button>
+        </div>
+        <div class="container">
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+            <span class="text"></span>
+        </div>
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#29348f" fill-opacity="1"
+            d="M0,128L48,154.7C96,181,192,235,288,213.3C384,192,480,96,576,90.7C672,85,768,171,864,176C960,181,1056,107,1152,90.7C1248,75,1344,117,1392,138.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+        </path>
+    </svg>
+
+    <div class="second">
+        <div class="header-second">
+            <div class="countup" id="countup1">
+                <span class="timeel days">00</span>
+                <span class="timeel timeRefDays">gün</span>
+                <span class="timeel hours">00</span>
+                <span class="timeel timeRefHours">saat</span>
+                <span class="timeel minutes">00</span>
+                <span class="timeel timeRefMinutes">dakika</span>
+                <span class="timeel seconds">00</span>
+                <span style="clear: both;" class="timeel timeRefSeconds">saniyedir hizmet veriyor.</span>
+            </div>
+            <script>
+                window.onload = function () {
+                    countUpFromTime("May 17, 2021 16:38:00", 'countup1');
+                };
+                function countUpFromTime(countFrom, id) {
+                    countFrom = new Date(countFrom).getTime();
+                    var now = new Date(),
+                        countFrom = new Date(countFrom),
+                        timeDifference = (now - countFrom);
+
+                    var secondsInADay = 60 * 60 * 1000 * 24,
+                        secondsInAHour = 60 * 60 * 1000;
+
+                    days = Math.floor(timeDifference / (secondsInADay) * 1);
+                    hours = Math.floor((timeDifference % (secondsInADay)) / (secondsInAHour) * 1);
+                    mins = Math.floor(((timeDifference % (secondsInADay)) % (secondsInAHour)) / (60 * 1000) * 1);
+                    secs = Math.floor((((timeDifference % (secondsInADay)) % (secondsInAHour)) % (60 * 1000)) / 1000 * 1);
+
+                    var idEl = document.getElementById(id);
+                    idEl.getElementsByClassName('days')[0].innerHTML = days;
+                    idEl.getElementsByClassName('hours')[0].innerHTML = hours;
+                    idEl.getElementsByClassName('minutes')[0].innerHTML = mins;
+                    idEl.getElementsByClassName('seconds')[0].innerHTML = secs;
+
+                    clearTimeout(countUpFromTime.interval);
+                    countUpFromTime.interval = setTimeout(function () { countUpFromTime(countFrom, id); }, 1000);
+                }
+            </script>
+        </div>
+
+        <div class="footer">
+            <p>© 2021 SınıfBot</p>
+            <p>powered by <a class="footer-link" href="https://hknsoft.com/" target="_blank"
+                    rel="noreferrer noopener nofollow">hknsoft</a></p>
+        </div>
+    </div>
 </body>
+
 </html>
