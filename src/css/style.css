@@ -123,6 +123,11 @@ body {
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
+.features img {
+  width: 300px;
+  height: auto;
+}
+
 .how-to {
   width: 90%;
   position: relative;
@@ -145,8 +150,7 @@ body {
   height: auto;
 }
 
-
-.features img {
+.features p img {
   width: 25px;
   height: 25px;
 }
@@ -154,7 +158,6 @@ body {
 .features h3 {
   text-align: right;
 }
-
 
 .commands-header {
   width: auto;
@@ -409,5 +412,9 @@ a.footer-link:hover {
 
   .countup {
     width: 80%;
+  }
+
+  .features img {
+    width: 100%;
   }
 }
